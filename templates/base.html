@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,14 +13,16 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="shortcut icon" type="image/png" href="../static/images/light-up-120.png" />
 
     {% block styles %}
     {% endblock %}
-    
+
     <title>Light Up!</title>
 </head>
 <header>
@@ -29,7 +32,7 @@
             <div class="row mb-2 logo-buttons">
                 <div class="col-9 col-lg-12">
                     <div class="col-lg-5 col-12 mb-3 pr-0"><a href="{{ url_for('get_home') }}">
-                        {% include 'includes/logo.html' %}
+                            {% include 'includes/logo.html' %}
                     </div>
                     <div class="col-lg-7 col-12 pl-0">
                         <div class="toggle-container">
@@ -63,9 +66,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-2 mr-1 d-lg-none text-right"><button class="navbar-toggler color red" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <div class="col-2 mr-1 d-lg-none text-right"><button class="navbar-toggler color red" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button></div>
             </div>
@@ -81,7 +84,8 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link nav-link-grey {% block navGroup%}{% endblock %}"
-                            href="{{ url_for('code_group') }}"><i class="fas fa-code nav-icon color red"></i> Community</a>
+                            href="{{ url_for('code_group') }}"><i class="fas fa-code nav-icon color red"></i>
+                            Community</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link nav-link-grey dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -91,7 +95,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item {% block navRegister%}{% endblock %}"
                                     href="{{ url_for('register') }}">Register</a></li>
-                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}" href="{{ url_for('login') }}">Login</a></li>
+                            <li><a class="dropdown-item {% block navLogin%}{% endblock %}"
+                                    href="{{ url_for('login') }}">Login</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -99,21 +104,22 @@
         </div>
     </nav>
 </header>
+
 <body>
-            <section>
-            <!--flashed messages-->
-            {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            {% for message in messages %}
-            <div class="row ml-4">
-                <p class="center-align flashed-messsages">
-                    {{ message }}
-                </p>
-            </div>
-            {% endfor %}
-            {% endif %}
-            {% endwith %}
-        </section>
+    <section>
+        <!--flashed messages-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        {% for message in messages %}
+        <div class="row ml-4">
+            <p class="center-align flashed-messsages">
+                {{ message }}
+            </p>
+        </div>
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+    </section>
     {% block content %}
     {% endblock %}
 
@@ -129,84 +135,104 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="footer-card">
-                            <h4>Designed By</h4>
-                            <a href="https://github.com/TimMorrisDev" target="_blank" class="color red">TimMorrisDev</a>
-                            <a href="https://github.com/Jade-ux" target="_blank" class="color red">Jade-ux</a>
-                            <a href="https://github.com/Sean-Mc-Mahon" target="_blank" class="color red">Sean-Mc-Mahon</a>
-                            <a href="https://github.com/mikemurtagh" target="_blank" class="color red">mikemurtagh</a>
-                            <a href="https://github.com/Brian-FullStack" target="_blank" class="color red">Brian-FullStack</a>
-                            <a href="https://github.com/ChronoLogic12" target="_blank" class="color red">ChronoLogic12</a>
-                        </div>
+                    <div class="footer-card">
+                        <h4>Designed By</h4>
+                        <a href="https://github.com/TimMorrisDev" target="_blank" class="color red">TimMorrisDev</a>
+                        <a href="https://github.com/Jade-ux" target="_blank" class="color red">Jade-ux</a>
+                        <a href="https://github.com/Sean-Mc-Mahon" target="_blank" class="color red">Sean-Mc-Mahon</a>
+                        <a href="https://github.com/mikemurtagh" target="_blank" class="color red">mikemurtagh</a>
+                        <a href="https://github.com/Brian-FullStack" target="_blank"
+                            class="color red">Brian-FullStack</a>
+                        <a href="https://github.com/ChronoLogic12" target="_blank" class="color red">ChronoLogic12</a>
                     </div>
+                </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-card">
-                        <a data-bs-toggle="modal" data-bs-target="#aboutUs" class="color red"><h4>About us</h4></a>
-                        <a href="https://www.privacypolicies.com/live/596f739b-9fac-420b-b8cd-9aaef76fa821" class="color red" target="_blank"><h4>Privacy Policy</h4></a>
-                        <div class="modal fade" id="aboutUs" tabindex="-1" aria-labelledby="aboutUsModalLabel" aria-hidden="true">
+                        <a data-bs-toggle="modal" data-bs-target="#aboutUs" class="color red">
+                            <h4>About us</h4>
+                        </a>
+                        <a href="https://www.privacypolicies.com/live/596f739b-9fac-420b-b8cd-9aaef76fa821"
+                            class="color red" target="_blank">
+                            <h4>Privacy Policy</h4>
+                        </a>
+                        <div class="modal fade" id="aboutUs" tabindex="-1" aria-labelledby="aboutUsModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h4 class="modal-title color red">About us</h4>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                  </div>
-                                  <div class="modal-body">
-                                    <article>
-                                        <strong class="color red">"Light Up"</strong> came to fruition as the result of a Hackathon being undertaken by current students and Alumni at Code Institute in June 2021.
-                                        The brief for our Hackathon is to build something that promotes and celebrates the LGBTQ+ community. We were therefore tasked with finding
-                                        solutions that amplify LGBTQ+ voices, connect the community, educate others and support the needs of LGBTQ+ people.
-                                        We designed and created an application which would allow members of the LGBTQ+ community in rural Ireland (with a passion for Coding and Tech),
-                                        to connect seamlessly with other users who share a similar interest.
-                                        In order to fulfil the brief and Hackacthon spec, our Application allows users to find upcoming events and either attend a physical event or create/join
-                                        a virtual event in the West of Ireland. The aim is to therefore allow such users feel a sense of inclusivity and belonging without having to travel
-                                        to Dublin which is typically the hub of gay life in Ireland. Networking and making connections is a huge part of allowing people to come together.
-                                        They will have a safe zone in which to make new acquaintances, attend virtual workshops, or attend in-person conferences, all with the underlying
-                                        theme of Community.
-                                        We are extremely proud to deliver and submit this project as part of the Pride Hackathon at Code Institute.
-                                        <br><br>
-                                        #ProudCoders
-                                    </article>
-                                  </div>
+                                    <div class="modal-header">
+                                        <h4 class="modal-title color red">About us</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <article>
+                                            <strong class="color red">"Light Up"</strong> came to fruition as the result
+                                            of a Hackathon being undertaken by current students and Alumni at Code
+                                            Institute in June 2021.
+                                            The brief for our Hackathon is to build something that promotes and
+                                            celebrates the LGBTQ+ community. We were therefore tasked with finding
+                                            solutions that amplify LGBTQ+ voices, connect the community, educate others
+                                            and support the needs of LGBTQ+ people.
+                                            We designed and created an application which would allow members of the
+                                            LGBTQ+ community in rural Ireland (with a passion for Coding and Tech),
+                                            to connect seamlessly with other users who share a similar interest.
+                                            In order to fulfil the brief and Hackacthon spec, our Application allows
+                                            users to find upcoming events and either attend a physical event or
+                                            create/join
+                                            a virtual event in the West of Ireland. The aim is to therefore allow such
+                                            users feel a sense of inclusivity and belonging without having to travel
+                                            to Dublin which is typically the hub of gay life in Ireland. Networking and
+                                            making connections is a huge part of allowing people to come together.
+                                            They will have a safe zone in which to make new acquaintances, attend
+                                            virtual workshops, or attend in-person conferences, all with the underlying
+                                            theme of Community.
+                                            We are extremely proud to deliver and submit this project as part of the
+                                            Pride Hackathon at Code Institute.
+                                            <br><br>
+                                            #ProudCoders
+                                        </article>
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-12">
                     <div class="footer-card social-links">
-                        <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook color red"></i></a>
-                        <a href="https://www.github.com/"  target="_blank"><i class="fab fa-github color red"></i></a>
-                        <a href="https://www.twitter.com/"  target="_blank"><i class="fab fa-twitter color red"></i></a>
-                    </div>  
+                        <a href="https://www.facebook.com/" target="_blank"><i
+                                class="fab fa-facebook color red"></i></a>
+                        <a href="https://www.github.com/" target="_blank"><i class="fab fa-github color red"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter color red"></i></a>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
                     <div class="copyright">
-                        <div>Copyright © Team 5, Pride Hackathon 2021</div>
+                        <div>Copyright © Team Light Up, Pride Hackathon 2021</div>
                     </div>
                 </div>
             </div>
         </div>
-    </footer> 
+    </footer>
 
     <script src="./static/js/app.js"></script>
     <script type="text/javascript"
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_c4mhpi8UoRoyIbp0mt4E3BUzPh5n6o&libraries=places&callback=initMap"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcTamNPI1Pe4MAqwMqq6JYO3z_zwwwuY&libraries=places&callback=initMap"
         defer>
-        </script>
+    </script>
     <script src="static/js/lightmap.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous">
-        </script>
+    </script>
     {% block scripts %}
     {% endblock %}
-    
+
 </body>
 
 </html>

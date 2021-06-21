@@ -647,3 +647,29 @@ footer{
 #info-content-events {
   min-height: fit-content;
 }
+
+.gm-fullscreen-control {
+  display: none;
+}
+
+div.gm-style-iw-d {
+  overflow-y: auto;
+  min-width: fit-content;
+  max-height: 390px;
+  min-height: 300px;
+}
+
+div.gm-style-iw.gm-style-iw-c {
+  background-color: #4cbdc5;
+  border-radius: 6px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  overflow-y: auto;
+  max-width: 90%;
+}
+
+.gm-style-iw-c {
+  max-height: 390px;
+  min-height: 300px;
+}

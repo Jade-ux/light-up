@@ -1,3 +1,7 @@
+"use strict";
+
+let infoWindow;
+
 function initMap() {
 
     // map option
@@ -333,7 +337,6 @@ function initMap() {
 
     };
 
-
     //event data
 
     let events = {
@@ -414,22 +417,21 @@ function initMap() {
         marker.addListener("mouseout", () => {
             marker.setIcon("static/images/pride-pin-simple.png");
         });
-
+        marker.addListener ("click", showInfoWindow)
     };
 
     for (let i in events) {
         addMarker(events[i].latLng)
-
     };
-    
-    function showInfoWindow() {
-    const marker = this;
-    buildIWContent(people);
-    infoWindow.open(map, marker);
-}
 
-function buildIWContent(people) {
-    document.getElementById("iw-event-name").textContent = people.person1.name;
-}
+    function showInfoWindow() {
+        const marker = this;
+        buildIWContent(people);
+        infoWindow.open(map, marker);
+    }
+
+    function buildIWContent(people) {
+        document.getElementById("iw-event-name").textContent = people.person1.name;
+    }
 
 }
