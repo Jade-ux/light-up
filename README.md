@@ -2,9 +2,6 @@
 
 ![Various Devices](https://github.com/TimMorrisDev/light-up/blob/master/static/wire/wire.JPG)
 
-### [Live Site](https://light-up-pride.herokuapp.com/)
-
-### [GitHub](https://github.com/TimMorrisDev/light-up)
 
 Light Up is Team 5's entry for the [Code Institute](https://codeinstitute.net/) Pride hackathon. The idea is to connect rural members of the LGBTQ community.
 
